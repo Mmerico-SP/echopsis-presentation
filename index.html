@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echopsis - Zodiac Labs Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;500;700&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { box-sizing: border-box; }
+        body { background-color: #050505; display: grid; gap: 30px; grid-template-columns: 1fr; margin: 0; min-height: 100vh; padding: 40px 0; place-items: center; }
+        .slide-container { background-color: #000; border-radius: 4px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9); display: flex; flex-direction: column; font-family: 'Urbanist', sans-serif; height: 720px; justify-content: center; overflow: hidden; padding: 80px; position: relative; width: 1280px; border: 1px solid #1a1a1a; }
+        .slide-container::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 90% 10%, rgba(255, 140, 0, 0.04) 0%, transparent 40%), radial-gradient(circle at 10% 90%, rgba(255, 140, 0, 0.02) 0%, transparent 40%); z-index: 0; }
+        .slide-container::after { content: ''; position: absolute; bottom: 40px; left: 80px; right: 80px; height: 1px; background: linear-gradient(90deg, transparent, #ff8c00, transparent); opacity: 0.3; }
+        .slide-container>* { position: relative; z-index: 1; }
+        h1, h2, h3 { color: #fff; font-weight: 700; font-family: 'Urbanist', sans-serif; margin: 0; text-transform: uppercase; letter-spacing: 4px; }
+        h1 span, h2 span { color: #ff8c00; }
+        .slide-container p, .slide-container li, .slide-container .subtitle, .slide-container th, .slide-container td { color: #a1a1a1; font-family: 'Urbanist', sans-serif; font-size: 20px; line-height: 1.5; font-weight: 300; }
+        .slide-container .subtitle { font-family: 'Space Mono', monospace; color: #ff8c00; font-size: 16px; letter-spacing: 2px; margin-top: 15px; }
+        .slide-container h1 { font-size: 110px; line-height: 1; }
+        .slide-container .slide-title { font-size: 54px; margin-bottom: 45px; text-align: left; width: 100%; border-left: 6px solid #ff8c00; padding-left: 25px; }
+        .slide-container h3 { font-size: 30px; margin-bottom: 15px; color: #ff8c00; }
+        .slide-container .content-area { display: flex; flex-direction: column; flex-grow: 1; justify-content: center; width: 100%; }
+        .title-layout { text-align: center; width: 100%; }
+        .title-layout img.logo-main { width: 180px; margin-bottom: 40px; filter: drop-shadow(0 0 20px rgba(255, 140, 0, 0.4)); }
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; width: 100%; align-items: center; }
+        .image-wrapper { border-radius: 4px; border: 1px solid #333; height: 400px; overflow: hidden; width: 100%; background: #080808; }
+        .image-wrapper img { height: 100%; width: 100%; object-fit: cover; opacity: 0.8; }
+        .image-wrapper.contain img { object-fit: contain; padding: 20px; }
+        .tiled-content { display: flex; gap: 30px; width: 100%; }
+        .tile { background-color: #0a0a0a; border: 1px solid #1a1a1a; padding: 40px; flex: 1; border-top: 4px solid #ff8c00; }
+        .tile .icon { color: #ff8c00; font-size: 42px; margin-bottom: 25px; }
+        .bullet-list ul { list-style: none; padding: 0; }
+        .bullet-list li { position: relative; padding-left: 45px; margin-bottom: 25px; }
+        .bullet-list i { position: absolute; left: 0; top: 5px; color: #ff8c00; font-size: 24px; }
+        .table-layout table { border-collapse: collapse; width: 100%; }
+        .table-layout th, .table-layout td { padding: 20px; text-align: left; border-bottom: 1px solid #1a1a1a; }
+        .table-layout th { font-family: 'Space Mono', monospace; color: #ff8c00; font-size: 16px; text-transform: uppercase; }
+        .table-layout td { color: #fff; font-weight: 500; }
+        .section-title-layout { text-align: center; width: 100%; }
+        .section-title-layout hr { background-color: #ff8c00; border: none; height: 4px; margin: 30px auto; width: 100px; }
+        #formula-container { background: #080808; padding: 20px; border-radius: 4px; margin-top: 20px; border: 1px solid #1a1a1a; text-align: center; font-size: 24px; color: #fff;}
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    <div class="title-layout">
+        <img src="logo.png" alt="Zodiac Labs Logo" class="logo-main" onerror="this.style.display='none'">
+        <h1>ECH<span>O</span>PSIS</h1>
+        <p class="subtitle">ZODIAC LABS // UNREAL ENGINE 5.6 // MATTEO MERICO</p>
+    </div>
+</div>
+
+<div class="slide-container">
+    <div class="section-title-layout">
+        <hr>
+        <h2>The <span>Narrative</span> Vision</h2>
+        <p class="subtitle">UN VIAGGIO NEI FRAMMENTI DELLA COSCIENZA</p>
+    </div>
+</div>
+
+<div class="slide-container">
+    <h2 class="slide-title">La Mente di <span>Frank</span></h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <p>Echopsis è un <strong>Thriller Psicologico Surreale</strong> focalizzato sulla sottrazione visiva. Frank, un fotografo di 50 anni, si risveglia in un loop mentale all'interno della propria casa deserta.</p>
+                <p>Non è un semplice viaggio: è la ricostruzione di una memoria frammentata, dove l'oscurità rappresenta il vuoto e la luce l'unica via per la catarsi finale.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="redroom.png" alt="Darkroom" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container">
+    <h2 class="slide-title">Project <span>Specs</span></h2>
+    <div class="content-area">
+        <div class="table-layout">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parametro</th>
+                        <th>Dettaglio Tecnico</th>
+                        <th>Obiettivo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Versione Engine</td>
+                        <td>Unreal Engine 5.6</td>
+                        <td>Integrazione Shader Custom</td>
+                    </tr>
+                    <tr>
+                        <td>Genere</td>
+                        <td>Thriller / Horror Psicologico</td>
+                        <td>Immersione Narrativa Totale</td>
+                    </tr>
+                    <tr>
+                        <td>Durata Stimata</td>
+                        <td>~45 Minuti</td>
+                        <td>Build Completa per Showcase</td>
+                    </tr>
+                    <tr>
+                        <td>Showcase Mode</td>
+                        <td>Live Editor Showcase</td>
+                        <td>Analisi Blueprint e Materiali</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container">
+    <div class="section-title-layout">
+        <hr>
+        <h2>Technical <span>Infrastructure</span></h2>
+        <p class="subtitle">POST-PROCESS & SHADER LOGIC</p>
+    </div>
+</div>
+
+<div class="slide-container">
+    <h2 class="slide-title">L'Echo: <span>Edge Detection</span></h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <p>In un mondo privo di luce, il suono è l'unica guida. Abbiamo implementato un sistema di ecolocalizzazione tramite un <strong>Post Process Material</strong> avanzato.</p>
+                <p>Utilizzando una <strong>Matrice di Sobel</strong> applicata al <em>Custom Depth</em>, l'ambiente rivela per pochi istanti i contorni (outline) degli oggetti.</p>
+                <div id="formula-container">
+                    G = &radic;(Gx&sup2; + Gy&sup2;)
+                </div>
+            </div>
+            <div class="image-wrapper contain">
+                <img src="outline.png" alt="Outline Effect" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container">
+    <h2 class="slide-title">La Voce nel <span>Buio</span></h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-microphone-lines"></i></div>
+                <h3>Doppiaggio</h3>
+                <p>Monologhi originali registrati per Frank, fondamentali per la narrazione e come indizi per il giocatore.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-wave-square"></i></div>
+                <h3>Audio Spaziale</h3>
+                <p>Implementazione di audio binaurale per localizzare i ricordi e guidare il movimento nell'oscurità.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-brain"></i></div>
+                <h3>Introspezione</h3>
+                <p>Ogni trigger audio modifica la percezione dell'ambiente, creando un loop psicologico costante.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container">
+    <h2 class="slide-title">Advanced <span>Shader</span> Logic</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <h3>Material Graph</h3>
+                <p>Il cuore tecnico dell'Echo risiede nella gestione dei <strong>Custom Stencil ID</strong>. Abbiamo isolato gli oggetti interattivi assegnando colori e priorità diverse all'outline.</p>
+                <p>La logica nodale gestisce la saturazione e lo spessore delle linee basandosi sulla distanza del "suono" emesso dal giocatore.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="material.png" alt="Material Graph Blueprint" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container">
+    <h2 class="slide-title">Blueprint <span>Infrastructure</span></h2>
+    <div class="content-area">
+        <div class="bullet-list">
+            <ul>
+                <li><i class="fa-solid fa-diagram-project"></i> <strong>Event Triggering:</strong> Sistemi complessi per l'attivazione sincronizzata di audio, doppiaggio e cambi ambientali surreali.</li>
+                <li><i class="fa-solid fa-hand-pointer"></i> <strong>Input Management:</strong> Gestione dinamica dei blocchi di movimento durante i monologhi chiave per garantire l'impatto emotivo.</li>
+                <li><i class="fa-solid fa-layer-group"></i> <strong>Post-Process Control:</strong> Attivazione e aggiornamento dei parametri dello shader in tempo reale tramite blueprint.</li>
+                <li><i class="fa-solid fa-sliders"></i> <strong>Scalability Logic:</strong> Ottimizzazione del buffer di rendering per mantenere alte prestazioni anche con calcoli Sobel complessi.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container">
+    <h2 class="slide-title">Project <span>Benchmarks</span></h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="image-wrapper" style="height:200px; margin-bottom:15px; border:none;">
+                    <img src="perception.jpg" alt="Perception" onerror="this.style.display='none'">
+                </div>
+                <h3>Perception</h3>
+                <p>Reference per la navigazione basata su ecolocalizzazione.</p>
+            </div>
+            <div class="tile">
+                <div class="image-wrapper" style="height:200px; margin-bottom:15px; border:none;">
+                    <img src="layers.jpg" alt="Layers of Fear" onerror="this.style.display='none'">
+                </div>
+                <h3>Layers of Fear</h3>
+                <p>Ispirazione per l'orrore psicologico e i loop ambientali.</p>
+            </div>
+            <div class="tile">
+                <div class="image-wrapper" style="height:200px; margin-bottom:15px; border:none;">
+                    <img src="soma.jpg" alt="SOMA" onerror="this.style.display='none'">
+                </div>
+                <h3>SOMA</h3>
+                <p>Riferimento per il peso narrativo e l'isolamento profondo.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container">
+    <div class="title-layout">
+        <h2>Live <span>Showcase</span></h2>
+        <p class="subtitle">ZODIAC LABS // ECHOPSIS // DOMANDE?</p>
+        <p style="margin-top: 40px; color: #444; font-family: 'Space Mono';">Matteo Merico - Sviluppatore UE 5.6</p>
+    </div>
+</div>
+
+</body>
+</html>
